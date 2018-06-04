@@ -1,9 +1,8 @@
 /**
  * CookieG cookieconsent wrapper class
  * @desc A cookieconsent.insites.com oszt�lyra �p�l� s�tikezel� oszt�ly.
- * @desc Seg�ts�g�vel csak 1 f�jlt kell berakni a htmlbe, az �sszes t�bbi f�gg�s�get ez az oszt�ly int�z.
- * @desc ha data-config attrib�tumban egy JSON f�jlt adunk meg akkor konfigur�ci�nak azt fogja haszn�lja, �gy tov�bb
- * @desc egyszer�s�dik a k�d.
+ * @desc With this class you can simplyfiy you cookieconsent.insites.com COOKIE box implementation.
+ * @desc Specify the configuration with a JSON file or with -new CookieG(configurationJSON)-.
  * @author György Sági (gyorgy.sagi@w5labs.com)
  * @date 2018.05.29
  * @version 0.1
