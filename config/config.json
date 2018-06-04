@@ -1,0 +1,15 @@
+{
+  "css": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css",
+  "script": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js",
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "transparent",
+      "text": "#f1d600",
+      "border": "#f1d600"
+    }
+  },
+  "type": "opt-in"
+}
