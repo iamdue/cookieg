@@ -39,8 +39,8 @@
 
     function CookieG(options) {
         this.cookieconsentURLs = {
-            'css': '//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css',
-            'script': '//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js'
+            'css': '//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css',
+            'script': '//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js'
         };
 
         if(options.hasOwnProperty('css')){
@@ -79,7 +79,7 @@
             link.href = css;
             context.appendChild(link);
         },
-        'injectScript': function (src, d) {
+        'injectScript': function (src, d, reject) {
             var self = this;
             d = d || document;
             var script = d.createElement('script');
@@ -89,6 +89,11 @@
                 self.initCookieConsent();
             };
             script.onerror = function () {
+                if(typeof reject !== 'function'){
+                    reject = function(x){
+                        console.log(x);
+                    }
+                }
                 reject(src + ' cannot be added. (Not found, or script error.)');
             };
             script.setAttribute('class', "cookiescript");
